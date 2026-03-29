@@ -24,7 +24,7 @@ Makefile
 *.dylib
 
 # --- IDE 相关 ---
-.vscode/
+# .vscode/
 .idea/
 *.swp
 *.swo
