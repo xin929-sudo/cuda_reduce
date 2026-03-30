@@ -5,7 +5,7 @@
             "name": "CUDA C++: Launch",
             "type": "cuda-gdb",
             "request": "launch",
-            "program": "/data/ycx/learncuda/cuda_reduce/build/1-cuda_reduce_study/my_reduce_v7_multi_add",
+            "program": "/data/ycx/learncuda/cuda_reduce/build/2-cuda_sgemm_study/my_sgemm_v0_global_memory",
             // 下面这行极其重要！一定要确保加上了！
             "miDebuggerPath": "/home/yechangxin/cuda-12.4/bin/cuda-gdb" 
         },

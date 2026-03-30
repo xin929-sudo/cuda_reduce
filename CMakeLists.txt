@@ -15,4 +15,5 @@ set(CUDAToolkit_ROOT "/home/yechangxin/cuda-12.4")
 
 find_package(CUDAToolkit REQUIRED) # 建议加上 REQUIRED，找不到时直接报错
 
-add_subdirectory(1-cuda_reduce_study)
+# add_subdirectory(1-cuda_reduce_study)
+add_subdirectory(2-cuda_sgemm_study)
