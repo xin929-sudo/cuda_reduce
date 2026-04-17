@@ -57,3 +57,7 @@ flaot4 就是 可以一次性读取4个float的数据
 
 ### my_sgemm_v6_smem_transpose
 主要是为了使用全链路的float4，将A矩阵进行转置存储在shared memory里面，后续就可以实现float4进行读取。
+
+### my_sgemm_v7_double_buffer
+GPU硬件自动并行调度访存和计算。发起一次访存读取请求之后，CPU会马上执行下一条指令，不等待。只要当要用到这个数据的时候，才会等待。
+所以可以采用double_buffer来，一个用来存，一个用来计算，读和计算就分开了。

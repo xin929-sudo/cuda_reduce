@@ -76,3 +76,15 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     # 保持这里的调试信息标志不变
     target_compile_options(my_sgemm_v6_smem_transpose   PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:-g;-G>)
 endif()
+
+# 添加可执行文件
+add_executable(my_sgemm_v7_double_buffer   my_sgemm_v7_double_buffer.cu)
+
+# 链接库
+target_link_libraries(my_sgemm_v7_double_buffer   PRIVATE CUDA::cudart CUDA::cublas)
+
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    # 保持这里的调试信息标志不变
+    target_compile_options(my_sgemm_v7_double_buffer   PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:-g;-G>)
+
+endif()
